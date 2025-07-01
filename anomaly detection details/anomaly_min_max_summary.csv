@@ -1,0 +1,9 @@
+Metric,Value
+temperature_min,28.1
+humidity_min,66.3
+air_quality_min,85.0
+noise_level_min,0.0
+temperature_max,34.9
+humidity_max,88.3
+air_quality_max,909.0
+noise_level_max,450.0

@@ -1,0 +1,1660 @@
+[
+    {
+        "id": "e59b1442e162ded0",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bbab97454fbd27d7",
+        "type": "mqtt-broker",
+        "name": "assignment/mongodata",
+        "broker": "36225042fed44b109e454fd294b50e37.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "NodeRedClient",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5b98862e18a79ae1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3a4f4161fdf4eedd",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5d479996ba087205",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "fd7adf9ee82648f9",
+        "type": "mqtt-broker",
+        "name": "motion and distance",
+        "broker": "http://36225042fed44b109e454fd294b50e37.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ff54f995350f96b9",
+        "type": "ui_group",
+        "name": "home2",
+        "tab": "3a4f4161fdf4eedd",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6dd4ac4da3dce902",
+        "type": "ui_tab",
+        "name": "asignemnt",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "49873b7cbc6ea522",
+        "type": "ui_group",
+        "name": "assignment",
+        "tab": "6dd4ac4da3dce902",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c28ba532bd8a572",
+        "type": "mongodb",
+        "hostname": "cluster0.mismnac.mongodb.net",
+        "topology": "dnscluster",
+        "connectOptions": "",
+        "port": 27017,
+        "db": "environment_monitoring",
+        "name": "MongoDBAtlas "
+    },
+    {
+        "id": "d74ec53b9b9f9117",
+        "type": "ui_tab",
+        "name": "Environmental Monitoring.",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "62c53d11e7e8f9df",
+        "type": "ui_group",
+        "name": "Temperature",
+        "tab": "d74ec53b9b9f9117",
+        "order": 10,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "350fcd5d1fc00141",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "d74ec53b9b9f9117",
+        "order": 11,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b2996b36afccfbdf",
+        "type": "ui_group",
+        "name": "Air Quality",
+        "tab": "d74ec53b9b9f9117",
+        "order": 12,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b9b63c82b839d5c",
+        "type": "ui_group",
+        "name": "Noise Level",
+        "tab": "d74ec53b9b9f9117",
+        "order": 14,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bc3aa68f3b2bea65",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "d74ec53b9b9f9117",
+        "order": 17,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "abf1dedf820d21dd",
+        "type": "ui_group",
+        "name": "temperature",
+        "tab": "d74ec53b9b9f9117",
+        "order": 18,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4975894990f64726",
+        "type": "ui_group",
+        "name": "humidity",
+        "tab": "d74ec53b9b9f9117",
+        "order": 19,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1a1ec95d14fdf591",
+        "type": "ui_group",
+        "name": "AQI",
+        "tab": "d74ec53b9b9f9117",
+        "order": 20,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "99be235bbae5a79b",
+        "type": "ui_group",
+        "name": "Noise level",
+        "tab": "d74ec53b9b9f9117",
+        "order": 21,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d36de8d2726e3d4a",
+        "type": "ui_group",
+        "name": "Temperature status",
+        "tab": "d74ec53b9b9f9117",
+        "order": 5,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9217e866afee0773",
+        "type": "ui_group",
+        "name": "Humidity Status",
+        "tab": "d74ec53b9b9f9117",
+        "order": 6,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7990bc12a7b78f1f",
+        "type": "ui_group",
+        "name": "Air Quality Status",
+        "tab": "d74ec53b9b9f9117",
+        "order": 7,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f1f67ab2fa16578",
+        "type": "ui_group",
+        "name": "Noice level status",
+        "tab": "d74ec53b9b9f9117",
+        "order": 8,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd87063e7ee6046e",
+        "type": "ui_group",
+        "name": "TEMP humidity  chart",
+        "tab": "d74ec53b9b9f9117",
+        "order": 16,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1e0ca14e3b8fde41",
+        "type": "ui_group",
+        "name": "test group1",
+        "tab": "d74ec53b9b9f9117",
+        "order": 15,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fb0e4d476ae40110",
+        "type": "ui_group",
+        "name": "Switch",
+        "tab": "d74ec53b9b9f9117",
+        "order": 9,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a05a79b1e93ee915",
+        "type": "ui_group",
+        "name": "Temperature big alart",
+        "tab": "d74ec53b9b9f9117",
+        "order": 1,
+        "disp": false,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "62358090d7f1ed3b",
+        "type": "ui_group",
+        "name": "Humidity Big Alert",
+        "tab": "d74ec53b9b9f9117",
+        "order": 2,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "39171501e7b3b91d",
+        "type": "ui_group",
+        "name": "Noice Level Big Alert",
+        "tab": "d74ec53b9b9f9117",
+        "order": 4,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5841498210c3e69a",
+        "type": "ui_group",
+        "name": "Air Quality Big Alert",
+        "tab": "d74ec53b9b9f9117",
+        "order": 3,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "51adde81a6bf989d",
+        "type": "ui_group",
+        "name": "Air Quality (CO2 )",
+        "tab": "d74ec53b9b9f9117",
+        "order": 13,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0faf36ab1dc87717",
+        "type": "telegram bot",
+        "botname": "school_alert_bot_iot_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "488e3a8623284ac3",
+        "type": "mqtt in",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "topic": "schoolzone/environment",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bbab97454fbd27d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1330,
+        "y": 80,
+        "wires": [
+            [
+                "aef637585aca7510"
+            ]
+        ]
+    },
+    {
+        "id": "aef637585aca7510",
+        "type": "json",
+        "z": "e59b1442e162ded0",
+        "name": "JSON Node",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1510,
+        "y": 140,
+        "wires": [
+            [
+                "7d65cddf94054655"
+            ]
+        ]
+    },
+    {
+        "id": "cf7a400d5b91af22",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "function 1",
+        "func": "let utcNow = new Date();\n\n// Create Sri Lanka local time\nlet localNow = new Date(utcNow.getTime() + (5 * 60 + 30) * 60000); // Add 5 hours 30 minutes in ms\n\nmsg.payload.timestamp = utcNow.toISOString();         // Store UTC timestamp\nmsg.payload.local_timestamp = localNow.toISOString(); // Store Sri Lanka local timestamp\nmsg.payload.zone = \"playground\"; \n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1520,
+        "y": 280,
+        "wires": [
+            [
+                "3581fafcddc904ea"
+            ]
+        ]
+    },
+    {
+        "id": "3581fafcddc904ea",
+        "type": "mongodb out",
+        "z": "e59b1442e162ded0",
+        "mongodb": "5c28ba532bd8a572",
+        "name": "InsertToMongoDB",
+        "collection": "sensors_datas",
+        "payonly": true,
+        "upsert": false,
+        "multi": false,
+        "operation": "insert",
+        "x": 1750,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "7d65cddf94054655",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Parse JSON String",
+        "func": "msg.payload = JSON.parse(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 200,
+        "wires": [
+            [
+                "cf7a400d5b91af22"
+            ]
+        ]
+    },
+    {
+        "id": "e0926b94c0ebb41a",
+        "type": "mongodb in",
+        "z": "e59b1442e162ded0",
+        "mongodb": "5c28ba532bd8a572",
+        "name": "",
+        "collection": "sensors_datas",
+        "operation": "find",
+        "x": 1390,
+        "y": 1140,
+        "wires": [
+            [
+                "5aa591f4d65b2271"
+            ]
+        ]
+    },
+    {
+        "id": "e585f0bd03a9fedc",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Prepare MongoDB Query",
+        "func": "msg.payload = {};         // empty query: fetch all\nmsg.sort = { timestamp: -1 }; // sort newest first\nmsg.limit = 2;            // fetch 2 records\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 1240,
+        "wires": [
+            [
+                "e0926b94c0ebb41a"
+            ]
+        ]
+    },
+    {
+        "id": "5aa591f4d65b2271",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Split Sensor Data",
+        "func": "let doc = msg.payload[0]; // Since we use limit 1\nreturn [\n  { payload: doc.temperature, topic: \"temperature\" },\n  { payload: doc.humidity, topic: \"humidity\" },\n  { payload: doc.air_quality, topic: \"air_quality\" },\n  { payload: doc.noise_level, topic: \"noise_level\" }\n];\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 1300,
+        "wires": [
+            [
+                "d8ebd2f76fc6bb98"
+            ],
+            [
+                "d8ebd2f76fc6bb98"
+            ],
+            [
+                "d8ebd2f76fc6bb98"
+            ],
+            [
+                "d8ebd2f76fc6bb98"
+            ]
+        ]
+    },
+    {
+        "id": "390790dd7eef5d69",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "1a1ec95d14fdf591",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Anomaly Alert",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1900,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e3d9cac7a670ff34",
+        "type": "inject",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1010,
+        "y": 1080,
+        "wires": [
+            [
+                "e585f0bd03a9fedc"
+            ]
+        ]
+    },
+    {
+        "id": "d8ebd2f76fc6bb98",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Anomaly Detection",
+        "func": "const sensor = msg.topic;\nconst value = parseFloat(msg.payload);\nconst maxBufferSize = 10;\n\nlet buffer = context.get(sensor) || [];\nbuffer.push(value);\nif (buffer.length > maxBufferSize) {\n    buffer.shift();\n}\ncontext.set(sensor, buffer);\n\nlet mean = buffer.reduce((a, b) => a + b, 0) / buffer.length;\nlet stdDev = Math.sqrt(buffer.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b, 0) / buffer.length);\n\nlet delta = Math.abs(value - mean);\nlet threshold = 2;\n\nlet label = `✅ Normal`;\nif (delta > threshold * stdDev) {\n    label = `❗ ${sensor.toUpperCase()} Spike: ${value} (Δ${delta.toFixed(2)}, µ=${mean.toFixed(2)}, σ=${stdDev.toFixed(2)})`;\n}\n\nlet output = [null, null, null, null];\nconst index = { temperature: 0, humidity: 1, air_quality: 2, noise_level: 3 };\noutput[index[sensor]] = { payload: label };\n\nreturn output;\n",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1690,
+        "y": 1220,
+        "wires": [
+            [
+                "d3d7bd04c644b7c0"
+            ],
+            [
+                "f77d5f69741a9b3d"
+            ],
+            [
+                "390790dd7eef5d69"
+            ],
+            [
+                "ba6de5efa89d0798"
+            ]
+        ]
+    },
+    {
+        "id": "d3d7bd04c644b7c0",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "abf1dedf820d21dd",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Anomaly Alert",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1840,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "f77d5f69741a9b3d",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "4975894990f64726",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Anomaly Alert",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1880,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "ba6de5efa89d0798",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "99be235bbae5a79b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Anomaly Alert",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1880,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "3360d1aeeaee21cd",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "function 2",
+        "func": "msg.payload = {};\nmsg.sort = { timestamp: -1 };  // newest first\nmsg.limit = 12;                // fetch only last 12\nreturn msg;\n\n\n\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 1580,
+        "wires": [
+            [
+                "9214fde2642a02ba"
+            ]
+        ]
+    },
+    {
+        "id": "9214fde2642a02ba",
+        "type": "mongodb in",
+        "z": "e59b1442e162ded0",
+        "mongodb": "5c28ba532bd8a572",
+        "name": "",
+        "collection": "sensors_datas",
+        "operation": "find",
+        "x": 1390,
+        "y": 1640,
+        "wires": [
+            [
+                "8afcbc3cf86ee359"
+            ]
+        ]
+    },
+    {
+        "id": "8afcbc3cf86ee359",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Process TempHum",
+        "func": "let data = msg.payload;\n\nif (!Array.isArray(data) || data.length === 0) {\n    node.warn(\"No data retrieved from MongoDB\");\n    return msg;\n}\n\n// Sort oldest → newest\ndata.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());\n\nlet labels = [];\nlet temp = [];\nlet humidity = [];\nlet aqi = [];\nlet noise = [];\n\ndata.forEach(record => {\n    labels.push(new Date(record.local_timestamp).toLocaleTimeString());\n    temp.push(record.temperature);\n    humidity.push(record.humidity);\n    aqi.push(record.air_quality);\n    noise.push(record.noise_level);\n});\n\n// Build payload for ui_template\nmsg.payload = {\n    labels: labels,\n    temp: temp,\n    humidity: humidity,\n    aqi: aqi,\n    noise: noise\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 1580,
+        "wires": [
+            [
+                "8d1c544fbf662917",
+                "f6e4fa0233e472a9"
+            ]
+        ]
+    },
+    {
+        "id": "9e3f319f2b3a5f2d",
+        "type": "inject",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1190,
+        "y": 1500,
+        "wires": [
+            [
+                "3360d1aeeaee21cd"
+            ]
+        ]
+    },
+    {
+        "id": "8d1c544fbf662917",
+        "type": "debug",
+        "z": "e59b1442e162ded0",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1840,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "f6e4fa0233e472a9",
+        "type": "ui_template",
+        "z": "e59b1442e162ded0",
+        "group": "fd87063e7ee6046e",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "<div>\n    <canvas id=\"correlationChart\" height=\"300\"></canvas>\n</div>\n\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\n    (function(scope) {\n    scope.$watch('msg', function(msg) {\n        if (!msg || !msg.payload) return;\n\n        const labels = msg.payload.labels;\n        const tempData = msg.payload.temp;\n        const humData = msg.payload.humidity;\n        \n\n        const ctx = document.getElementById('correlationChart').getContext('2d');\n        if (window.corrChart) window.corrChart.destroy();  // Destroy previous chart\n\n        window.corrChart = new Chart(ctx, {\n            type: 'line',\n            data: {\n                labels: labels,\n                datasets: [\n                    {\n                        label: 'Temperature',\n                        data: tempData,\n                        borderColor: 'red',\n                        fill: false\n                    },\n                    {\n                        label: 'Humidity',\n                        data: humData,\n                        borderColor: 'blue',\n                        fill: false\n                    }\n                   \n                ]\n            },\n            options: {\n                responsive: true,\n                plugins: {\n                    legend: { display: true }\n                },\n                scales: {\n                    x: { display: true, title: { display: true, text: 'Timestamp' }},\n                    y: { display: true, title: { display: true, text: 'Sensor Value' }}\n                }\n            }\n        });\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1800,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aef28e51483b0c41",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Split Sensor Data",
+        "func": "// Calibration function for noise level (example: raw ADC to dB scale)\nfunction calibrateNoise(raw_value) {\n    let raw_min = 0;\n    let raw_max = 1024; // adjust based on your ESP32 ADC range\n    let db_min = 30;\n    let db_max = 130;\n    let calibrated = db_min + ((raw_value - raw_min) / (raw_max - raw_min)) * (db_max - db_min);\n    return Math.round(Math.max(db_min, Math.min(calibrated, db_max)) * 100) / 100; // round to 2 decimals\n}\n\nlet data = msg.payload;\n\nlet result = {\n    temperature: Number(data.temperature) || 0,\n    humidity: Number(data.humidity) || 0,\n    air_quality: Number(data.air_quality) || 0,\n    noise_level: calibrateNoise(Number(data.noise_level) || 0)  // replace raw with calibrated noise\n};\n\nmsg.payload = result;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 1960,
+        "wires": [
+            [
+                "3dc01a893cc3cf96"
+            ]
+        ]
+    },
+    {
+        "id": "6e1633c0cae679f9",
+        "type": "mqtt in",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "topic": "schoolzone/environment",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bbab97454fbd27d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 810,
+        "y": 1840,
+        "wires": [
+            [
+                "ae6b691f415a3c5e"
+            ]
+        ]
+    },
+    {
+        "id": "ae6b691f415a3c5e",
+        "type": "json",
+        "z": "e59b1442e162ded0",
+        "name": "JSON Node",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1070,
+        "y": 1860,
+        "wires": [
+            [
+                "ac2c79c73e99658d"
+            ]
+        ]
+    },
+    {
+        "id": "ac2c79c73e99658d",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Parse JSON String",
+        "func": "msg.payload = JSON.parse(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 1920,
+        "wires": [
+            [
+                "aef28e51483b0c41"
+            ]
+        ]
+    },
+    {
+        "id": "3dc01a893cc3cf96",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Generate Alerts + Switch",
+        "func": "let temp = msg.payload.temperature;\nlet humidity = msg.payload.humidity;\nlet airQuality = msg.payload.air_quality;\nlet noise = msg.payload.noise_level;\n\nlet tempMsg = { payload: '' };\nlet humidityMsg = { payload: '' };\nlet airQualityMsg = { payload: '' };\nlet noiseMsg = { payload: '' };\nlet tempSwitchMsg = { payload: false };\n\n// Temperature check\nif (temp < 24) {\n    tempMsg.payload = '<div style=\"color:blue; font-size:16px; font-weight:bold;\">❄️ Cold Temperature</div>';\n} else if (temp < 30) {\n    tempMsg.payload = '<div style=\"color:green; font-size:16px; font-weight:bold;\">✅ Comfortable Temperature</div>';\n} else if (temp < 36) {\n    tempMsg.payload = '<div style=\"color:orange; font-size:16px; font-weight:bold;\">⚠️ Warm Temperature</div>';\n} else if (temp < 40) {\n    tempMsg.payload = '<div style=\"color:red; font-size:16px; font-weight:bold;\">🔴 Hot Temperature</div>';\n    tempSwitchMsg.payload = true;\n} else {\n    tempMsg.payload = '<div style=\"color:maroon; font-size:16px; font-weight:bold;\">🚨 Dangerously Hot Temperature!</div>';\n    tempSwitchMsg.payload = true;\n}\n\n// Humidity check\nif (humidity < 30) {\n    humidityMsg.payload = '<div style=\"color:blue; font-size:16px; font-weight:bold;\">💧 Very Low Humidity</div>';\n} else if (humidity < 60) {\n    humidityMsg.payload = '<div style=\"color:green; font-size:16px; font-weight:bold;\">✅ Comfortable Humidity</div>';\n} else if (humidity < 88) {\n    humidityMsg.payload = '<div style=\"color:orange; font-size:16px; font-weight:bold;\">⚠️Average Humidity</div>';\n} else if (humidity > 88) {\n    humidityMsg.payload = '<div style=\"color:red; font-size:16px; font-weight:bold;\">🔴 High Humidity</div>';\n} else {\n    humidityMsg.payload = '<div style=\"color:maroon; font-size:16px; font-weight:bold;\">🚨 Dangerously Humidity!</div>';\n}\n\n// Air Quality check (AQI scale)\nif (airQuality <= 150) {\n    airQualityMsg.payload = '<div style=\"color:green; font-size:16px; font-weight:bold;\">🟢 Good  Air Quality</div>';\n} else if (airQuality <= 300) {\n    airQualityMsg.payload = '<div style=\"color:yellow; font-size:16px; font-weight:bold;\">🟡 Typical indoor air</div>';\n} else if (airQuality <= 500) {\n    airQualityMsg.payload = '<div style=\"color:orange; font-size:16px; font-weight:bold;\">🟠Poor Air Quality. Unhealthy for Sensitive Groups</div>';\n} else if (airQuality <= 800) {\n    airQualityMsg.payload = '<div style=\"color:red; font-size:16px; font-weight:bold;\">🔴 Very polluted air</div>';\n}\n\n// Noise Level check (dB calibrated)\nif (noise < 40) {\n    noiseMsg.payload = '<div style=\"color:blue; font-size:16px; font-weight:bold;\">🔵 Quiet Environment</div>';\n} else if (noise < 60) {\n    noiseMsg.payload = '<div style=\"color:green; font-size:16px; font-weight:bold;\">🟢 Normal Indoor Noise</div>';\n} else if (noise < 75) {\n    noiseMsg.payload = '<div style=\"color:orange; font-size:16px; font-weight:bold;\">🟠 Busy Street Level</div>';\n} else if (noise < 90) {\n    noiseMsg.payload = '<div style=\"color:red; font-size:16px; font-weight:bold;\">🔴 Loud, Caution Advised</div>';\n} else {\n    noiseMsg.payload = '<div style=\"color:maroon; font-size:16px; font-weight:bold;\">🚨 Dangerous Noise, Risk of Hearing Damage!</div>';\n}\n\nreturn [tempMsg, humidityMsg, airQualityMsg, noiseMsg, tempSwitchMsg];\n",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 1860,
+        "wires": [
+            [
+                "d7385908a85d1d61"
+            ],
+            [
+                "fb07cd14857fe17f"
+            ],
+            [
+                "d9ddab8c4c7f058d"
+            ],
+            [
+                "6c216c3257defa2f"
+            ],
+            [
+                "48a35338800a9002"
+            ]
+        ]
+    },
+    {
+        "id": "d7385908a85d1d61",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "d36de8d2726e3d4a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "18",
+        "color": "#f1a63b",
+        "x": 1870,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "fb07cd14857fe17f",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "9217e866afee0773",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidity Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "18",
+        "color": "#f1a63b",
+        "x": 1892.9166259765625,
+        "y": 1888.333251953125,
+        "wires": []
+    },
+    {
+        "id": "d9ddab8c4c7f058d",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "7990bc12a7b78f1f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Air Quallity Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "18",
+        "color": "#f1a63b",
+        "x": 1890,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "6c216c3257defa2f",
+        "type": "ui_text",
+        "z": "e59b1442e162ded0",
+        "group": "4f1f67ab2fa16578",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Noice Level Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "18",
+        "color": "#f1a63b",
+        "x": 1890,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "48a35338800a9002",
+        "type": "ui_switch",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "label": "Temperature Auto Switch",
+        "tooltip": "",
+        "group": "fb0e4d476ae40110",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1870,
+        "y": 2120,
+        "wires": [
+            [
+                "bbb1a89233666a21"
+            ]
+        ]
+    },
+    {
+        "id": "bbb1a89233666a21",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Prepare Fan Command",
+        "func": "let statusMessage = msg.payload ? '✅ AC is ON (User Command)' : '❌ AC is OFF (User Command)';\nmsg.payload = statusMessage;\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 2180,
+        "wires": [
+            [
+                "557395b1dad06c8c"
+            ]
+        ]
+    },
+    {
+        "id": "557395b1dad06c8c",
+        "type": "ui_toast",
+        "z": "e59b1442e162ded0",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 2310,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "1f1993f17757e1fa",
+        "type": "mqtt in",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "topic": "schoolzone/environment",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "bbab97454fbd27d7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1170,
+        "y": 560,
+        "wires": [
+            [
+                "ad1dc2af73f58435"
+            ]
+        ]
+    },
+    {
+        "id": "a3e9475552aa1b4d",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Split Sensor Data",
+        "func": "// Calibration function for Air Quality (CO₂ ppm)\nfunction calibrateAirQuality(raw_value) {\n    let raw_min = 100;\n    let raw_max = 800;\n    let ppm_min = 400;\n    let ppm_max = 2000;\n    let calibrated = ppm_min + ((raw_value - raw_min) / (raw_max - raw_min)) * (ppm_max - ppm_min);\n    return Math.round(Math.max(ppm_min, Math.min(calibrated, ppm_max)) * 100) / 100; // round to 2 decimals\n}\n\n// Calibration function for Noise Level (approximate dB)\nfunction calibrateNoiseLevel(raw_value) {\n    let raw_min = 0;\n    let raw_max = 4095;\n    let db_min = 30;\n    let db_max = 130;\n    let calibrated = db_min + ((raw_value - raw_min) / (raw_max - raw_min)) * (db_max - db_min);\n    return Math.round(Math.max(db_min, Math.min(calibrated, db_max)) * 100) / 100; // round to 2 decimals\n}\n\n// Read raw sensor values\nlet temperature = msg.payload.temperature;\nlet humidity = msg.payload.humidity;\nlet airRaw = msg.payload.air_quality;\nlet noiseRaw = msg.payload.noise_level;\n\n// Apply calibration\nlet calibratedCO2 = calibrateAirQuality(airRaw);\nlet calibratedNoise = calibrateNoiseLevel(noiseRaw);\n\n// Prepare outputs (5 outputs):\n// 1. Temperature (raw)\n// 2. Humidity (raw)\n// 3. Air Quality (raw → used for control)\n// 4. Air Quality (calibrated CO₂ ppm → display only)\n// 5. Noise Level (calibrated dB → display only)\n\nlet temperatureMsg = { payload: temperature, topic: \"Temperature\" };\nlet humidityMsg = { payload: humidity, topic: \"Humidity\" };\nlet airQualityRawMsg = { payload: airRaw, topic: \"Air Quality (Raw)\" };\nlet airQualityCalibratedMsg = { payload: calibratedCO2, topic: \"CO2 (ppm)\" };\nlet noiseLevelCalibratedMsg = { payload: calibratedNoise, topic: \"Noise Level (dB)\" };\n\nreturn [\n    temperatureMsg,\n    humidityMsg,\n    airQualityRawMsg,\n    airQualityCalibratedMsg,\n    noiseLevelCalibratedMsg\n];\n",
+        "outputs": 5,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 680,
+        "wires": [
+            [
+                "cd67faab8081040b",
+                "58af0f51620f957a"
+            ],
+            [
+                "d0d0466e868705e1",
+                "41c505c0d6d55afe"
+            ],
+            [
+                "22697062a8a981e2",
+                "d7bdc43ab51e0b39"
+            ],
+            [
+                "2199ded120e264d7",
+                "b6fee21ec37adcca"
+            ],
+            [
+                "33296dcc2090c243",
+                "bfe07c68a06591ec"
+            ]
+        ]
+    },
+    {
+        "id": "58af0f51620f957a",
+        "type": "ui_gauge",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "62c53d11e7e8f9df",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1950,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "41c505c0d6d55afe",
+        "type": "ui_gauge",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "350fcd5d1fc00141",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%rh",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1860,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d7bdc43ab51e0b39",
+        "type": "ui_gauge",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "b2996b36afccfbdf",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Raw Air Quality",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "800",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2020,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "33296dcc2090c243",
+        "type": "ui_gauge",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "2b9b63c82b839d5c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Noice Level",
+        "label": "DB",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2070,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "cd67faab8081040b",
+        "type": "ui_chart",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "62c53d11e7e8f9df",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1550,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0d0466e868705e1",
+        "type": "ui_chart",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "350fcd5d1fc00141",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1440,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22697062a8a981e2",
+        "type": "ui_chart",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "b2996b36afccfbdf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Air Quality",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1610,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfe07c68a06591ec",
+        "type": "ui_chart",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "2b9b63c82b839d5c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Noice Level",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "99",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1750,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad1dc2af73f58435",
+        "type": "json",
+        "z": "e59b1442e162ded0",
+        "name": "JSON Node",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1310,
+        "y": 640,
+        "wires": [
+            [
+                "ebff8c75173e809e"
+            ]
+        ]
+    },
+    {
+        "id": "ebff8c75173e809e",
+        "type": "function",
+        "z": "e59b1442e162ded0",
+        "name": "Parse JSON String",
+        "func": "msg.payload = JSON.parse(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1450,
+        "y": 560,
+        "wires": [
+            [
+                "a3e9475552aa1b4d"
+            ]
+        ]
+    },
+    {
+        "id": "2199ded120e264d7",
+        "type": "ui_gauge",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "51adde81a6bf989d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Caibarated Air Quality (CO2)",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1980,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b6fee21ec37adcca",
+        "type": "ui_chart",
+        "z": "e59b1442e162ded0",
+        "name": "",
+        "group": "51adde81a6bf989d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "CO2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "3",
+        "removeOlderPoints": "99",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1850,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    }
+]

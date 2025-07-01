@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart School Environmental Monitoring Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta http-equiv="refresh" content="300">
+  <style>
+    .alert { font-size: 0.95rem; }
+    canvas { background: #fff; border-radius: 8px; padding: 10px; }
+    .carousel-item { padding: 0.5rem; }
+    .card-title .badge { font-size: 1rem; padding: 6px 10px; }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: #00000055;
+      border-radius: 50%;
+    }
+    .anomaly-list li { margin-bottom: 5px; }
+  </style>
+</head>
+<body class="bg-light">
+
+<div class="container my-4">
+  <div class="text-center mb-4">
+    <h1>🏫 Smart School Zone Environmental Dashboard</h1>
+    <p class="text-muted" id="lastUpdated"></p>
+  </div>
+
+  <!--  Real-Time Safety Alerts -->
+  <div id="safety-alerts" class="mb-3"></div>
+
+  <!--  CO₂ Metrics Cards -->
+  <div class="row mb-4" id="co2-metrics-cards"></div>
+
+  <!--  Anomaly Detection Section -->
+  <div class="accordion mb-4" id="anomalyAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingAnomaly">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnomaly" aria-expanded="false">
+          🔍 Detected Anomalies (Last Hour)
+        </button>
+      </h2>
+      <div id="collapseAnomaly" class="accordion-collapse collapse" data-bs-parent="#anomalyAccordion">
+        <div class="accordion-body" id="anomaly-output">
+          <div class="text-muted">Loading anomalies...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Forecast Recommendations Carousel -->
+  <div class="mb-4">
+    <h5 class="text-success"> Forecast-Based Safety Recommendations</h5>
+    <div id="forecast-recommendations-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="60000">
+      <div class="carousel-inner" id="carousel-alerts"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#forecast-recommendations-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#forecast-recommendations-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <hr>
+  <h4 class="text-primary"> Real-Time Monitoring </h4>
+  <div class="row g-4">
+    <div class="col-md-6"><canvas id="realtimeTempChart"></canvas></div>
+    <div class="col-md-6"><canvas id="realtimeHumidityChart"></canvas></div>
+    <div class="col-md-6"><canvas id="realtimeAirQualityChart"></canvas></div>
+    <div class="col-md-6"><canvas id="realtimeNoiseChart"></canvas></div>
+  </div>
+
+  <hr class="mt-5">
+  <h4 class="text-success"> 24-Hour Forecast</h4>
+  <div class="row g-4">
+    <div class="col-md-6"><canvas id="forecastTempChart"></canvas></div>
+    <div class="col-md-6"><canvas id="forecastHumidityChart"></canvas></div>
+    <div class="col-md-6"><canvas id="forecastAirQualityChart"></canvas></div>
+    <div class="col-md-6"><canvas id="forecastNoiseChart"></canvas></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  const realtime = {{ realtime | tojson | safe }};
+  const forecast = {{ forecast | tojson | safe }};
+  document.getElementById("lastUpdated").innerText = "Last Updated: " + new Date().toLocaleString();
+
+  const thresholds = {
+    tempHigh: 35, tempVeryHigh: 38, tempLow: 18,
+    humidityHigh: 80, humidityLow: 30,
+    air_qualityPoor: 1000, air_qualityVeryPoor: 1500,
+    noiseHigh: 70, noiseSilent: 30
+  };
+
+  function checkSafetyAlerts() {
+    let alertsHtml = '';
+    if (realtime.temperatures.length > 0) {
+      const temp = realtime.temperatures.at(-1);
+      const hum = realtime.humidities.at(-1);
+      const aqi = realtime.air_qualities.at(-1);
+      const noise = realtime.noise_levels.at(-1);
+
+      if (temp > thresholds.tempVeryHigh)
+        alertsHtml += `<div class="alert alert-danger"><strong> Extreme Heat:</strong> ${temp}°C</div>`;
+      else if (temp > thresholds.tempHigh)
+        alertsHtml += `<div class="alert alert-warning"><strong>High Temperature:</strong> ${temp}°C</div>`;
+      else if (temp < thresholds.tempLow)
+        alertsHtml += `<div class="alert alert-info"> <strong>Low Temperature:</strong> ${temp}°C</div>`;
+
+      if (hum > thresholds.humidityHigh)
+        alertsHtml += `<div class="alert alert-warning"> <strong>High Humidity:</strong> ${hum}%</div>`;
+      else if (hum < thresholds.humidityLow)
+        alertsHtml += `<div class="alert alert-info"> <strong>Low Humidity:</strong> ${hum}%</div>`;
+
+      if (aqi > thresholds.air_qualityVeryPoor)
+        alertsHtml += `<div class="alert alert-danger"><strong> Hazardous CO₂:</strong> ${aqi} ppm</div>`;
+      else if (aqi > thresholds.air_qualityPoor)
+        alertsHtml += `<div class="alert alert-danger"> <strong>Poor Air Quality:</strong> ${aqi} ppm</div>`;
+
+      if (noise > thresholds.noiseHigh)
+        alertsHtml += `<div class="alert alert-warning"> <strong>High Noise Level:</strong> ${noise} dB</div>`;
+      else if (noise < thresholds.noiseSilent)
+        alertsHtml += `<div class="alert alert-secondary"> <strong>Very Quiet:</strong> ${noise} dB</div>`;
+    }
+    document.getElementById('safety-alerts').innerHTML =
+      alertsHtml || `<div class="alert alert-success"> All environmental conditions are within safe limits.</div>`;
+  }
+
+  function renderCO2Cards() {
+    const metrics = realtime.co2_metrics;
+    if (!metrics || Object.keys(metrics).length === 0) return;
+
+    const co2CardHtml = `
+      <div class="col-md-6">
+        <div class="card border-info shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title"> Latest CO₂</h5>
+            <p class="card-text display-6 fw-bold text-info">${metrics.latest} ppm</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-success shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title"> Avg CO₂ (Last Hour)</h5>
+            <p class="card-text display-6 fw-bold text-success">${metrics.average} ppm</p>
+          </div>
+        </div>
+      </div>
+    `;
+    document.getElementById('co2-metrics-cards').innerHTML = co2CardHtml;
+  }
+
+  function renderAnomalies() {
+    const out = document.getElementById('anomaly-output');
+    const a = realtime.anomalies;
+    let html = '';
+    if (!a || Object.keys(a).length === 0) {
+      out.innerHTML = '<div class="text-success"> No anomalies detected in the past hour.</div>';
+      return;
+    }
+    for (const key in a) {
+      const nameMap = {
+        temperature: ' Temperature',
+        humidity: ' Humidity',
+        air_quality: ' CO₂',
+        noise_level: ' Noise'
+      };
+      if (a[key].length > 0) {
+        html += `<h6 class="mt-2">${nameMap[key] || key} anomalies:</h6><ul class="anomaly-list">`;
+        a[key].forEach(t => html += `<li> ${t}</li>`);
+        html += `</ul>`;
+      }
+    }
+    out.innerHTML = html;
+  }
+
+  function renderForecastRecommendations() {
+    const carouselContainer = document.getElementById('carousel-alerts');
+    if (!forecast.alerts || forecast.alerts.length === 0) {
+      carouselContainer.innerHTML = '<div class="carousel-item active"><div class="alert alert-success">✅ No forecasted risks in the next 24 hours.</div></div>';
+      return;
+    }
+
+    let slidesHtml = '';
+    const chunkSize = 2;
+    for (let i = 0; i < forecast.alerts.length; i += chunkSize) {
+      const alertsGroup = forecast.alerts.slice(i, i + chunkSize);
+      let cardGroup = '<div class="row g-3">';
+      alertsGroup.forEach(alert => {
+        let colorClass = 'warning', icon = 'ℹ️';
+        if (alert.includes("Extreme heat") || alert.includes("Hazardous")) { colorClass = 'danger'; icon = '☠️'; }
+        else if (alert.includes("High temperature")) { colorClass = 'warning'; icon = '🔥'; }
+        else if (alert.includes("Low temperature")) { colorClass = 'info'; icon = '🧊'; }
+        else if (alert.includes("High humidity")) { colorClass = 'warning'; icon = '💧'; }
+        else if (alert.includes("Low humidity")) { colorClass = 'info'; icon = '🟦'; }
+        else if (alert.includes("Poor air quality")) { colorClass = 'danger'; icon = '🌫️'; }
+        else if (alert.includes("High noise")) { colorClass = 'warning'; icon = '🔊'; }
+        else if (alert.includes("Quiet")) { colorClass = 'secondary'; icon = '🔇'; }
+
+        const formatted = alert.replace(/\+00:00/, '').replace('T', ' ');
+        cardGroup += `<div class="col-md-6"><div class="card border-${colorClass} shadow-sm"><div class="card-body p-2"><h6 class="card-title mb-1"><span class="badge bg-${colorClass}">${icon}</span> ${formatted}</h6></div></div></div>`;
+      });
+      cardGroup += '</div>';
+      slidesHtml += `<div class="carousel-item ${i === 0 ? 'active' : ''}">${cardGroup}</div>`;
+    }
+
+    carouselContainer.innerHTML = slidesHtml;
+  }
+
+  function formatTimestamps(raw) {
+    return raw;
+  }
+
+  function createChart(id, label, labels, data, color) {
+    new Chart(document.getElementById(id), {
+      type: 'line',
+      data: {
+        labels: formatTimestamps(labels),
+        datasets: [{
+          label: label,
+          data: data,
+          borderColor: color,
+          backgroundColor: color,
+          fill: false,
+          tension: 0.4,
+          pointRadius: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true }
+        },
+        scales: {
+          x: {
+            ticks: {
+              maxRotation: 30,
+              minRotation: 30,
+              autoSkip: true,
+              maxTicksLimit: 12,
+              font: { size: 10 }
+            },
+            title: { display: true, text: 'Time' }
+          },
+          y: {
+            beginAtZero: false,
+            title: { display: true, text: 'Value' },
+            ticks: { font: { size: 10 } }
+          }
+        }
+      }
+    });
+  }
+
+  //  Init
+  checkSafetyAlerts();
+  renderForecastRecommendations();
+  renderAnomalies();
+  renderCO2Cards();
+
+  // Charts
+  createChart('realtimeTempChart', 'Temperature (°C)', realtime.timestamps, realtime.temperatures, 'orange');
+  createChart('realtimeHumidityChart', 'Humidity (%)', realtime.timestamps, realtime.humidities, 'blue');
+  createChart('realtimeAirQualityChart', 'Air quality', realtime.timestamps, realtime.air_qualities, 'purple');
+  createChart('realtimeNoiseChart', 'Noise Level (dB)', realtime.timestamps, realtime.noise_levels, 'green');
+
+  createChart('forecastTempChart', 'Forecast Temperature (°C)', forecast.timestamps, forecast.temperatures, 'red');
+  createChart('forecastHumidityChart', 'Forecast Humidity (%)', forecast.timestamps, forecast.humidities, 'blue');
+  createChart('forecastAirQualityChart', 'Forecast Air Quality', forecast.timestamps, forecast.air_qualities, 'purple');
+  createChart('forecastNoiseChart', 'Forecast Noise Level (dB)', forecast.timestamps, forecast.noise_levels, 'green');
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
